@@ -14,6 +14,12 @@
 		DE9408642B6D387B00E6B60C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE9408622B6D387B00E6B60C /* LaunchScreen.storyboard */; };
 		DE9408922B6D53B100E6B60C /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9408912B6D53B100E6B60C /* FileService.swift */; };
 		DE9408942B6D756A00E6B60C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9408932B6D756A00E6B60C /* Extension.swift */; };
+		DE9BF5232B713BF7004F2D1C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9BF5222B713BF7004F2D1C /* LogInViewController.swift */; };
+		DE9BF5252B713C5F004F2D1C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9BF5242B713C5F004F2D1C /* SettingsViewController.swift */; };
+		DEBF06722B7BF15600234832 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DEBF06712B7BF15600234832 /* KeychainSwift */; };
+		DEBF06742B7BF17D00234832 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DEBF06732B7BF17D00234832 /* KeychainSwift */; };
+		DEBF06762B7BF1CD00234832 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF06752B7BF1CD00234832 /* PasswordViewController.swift */; };
+		DEBF06782B7BF22D00234832 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBF06772B7BF22D00234832 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,10 @@
 		DE9408652B6D387B00E6B60C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE9408912B6D53B100E6B60C /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
 		DE9408932B6D756A00E6B60C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		DE9BF5222B713BF7004F2D1C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		DE9BF5242B713C5F004F2D1C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DEBF06752B7BF1CD00234832 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		DEBF06772B7BF22D00234832 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEBF06742B7BF17D00234832 /* KeychainSwift in Frameworks */,
+				DEBF06722B7BF15600234832 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +78,10 @@
 				DE9408602B6D387B00E6B60C /* Assets.xcassets */,
 				DE9408622B6D387B00E6B60C /* LaunchScreen.storyboard */,
 				DE9408652B6D387B00E6B60C /* Info.plist */,
+				DE9BF5222B713BF7004F2D1C /* LogInViewController.swift */,
+				DE9BF5242B713C5F004F2D1C /* SettingsViewController.swift */,
+				DEBF06752B7BF1CD00234832 /* PasswordViewController.swift */,
+				DEBF06772B7BF22D00234832 /* TabBarController.swift */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
@@ -86,6 +102,10 @@
 			dependencies = (
 			);
 			name = FileManager;
+			packageProductDependencies = (
+				DEBF06712B7BF15600234832 /* KeychainSwift */,
+				DEBF06732B7BF17D00234832 /* KeychainSwift */,
+			);
 			productName = FileManager;
 			productReference = DE9408542B6D387900E6B60C /* FileManager.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +134,9 @@
 				Base,
 			);
 			mainGroup = DE94084B2B6D387900E6B60C;
+			packageReferences = (
+				DEBF06702B7BF15600234832 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = DE9408552B6D387900E6B60C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,7 +164,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE9408942B6D756A00E6B60C /* Extension.swift in Sources */,
+				DEBF06762B7BF1CD00234832 /* PasswordViewController.swift in Sources */,
+				DE9BF5232B713BF7004F2D1C /* LogInViewController.swift in Sources */,
+				DEBF06782B7BF22D00234832 /* TabBarController.swift in Sources */,
 				DE94085C2B6D387900E6B60C /* FileManagerController.swift in Sources */,
+				DE9BF5252B713C5F004F2D1C /* SettingsViewController.swift in Sources */,
 				DE9408582B6D387900E6B60C /* AppDelegate.swift in Sources */,
 				DE94085A2B6D387900E6B60C /* SceneDelegate.swift in Sources */,
 				DE9408922B6D53B100E6B60C /* FileService.swift in Sources */,
@@ -355,6 +382,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DEBF06702B7BF15600234832 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 21.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DEBF06712B7BF15600234832 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEBF06702B7BF15600234832 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		DEBF06732B7BF17D00234832 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEBF06702B7BF15600234832 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE94084C2B6D387900E6B60C /* Project object */;
 }

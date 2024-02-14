@@ -13,18 +13,18 @@ final class FileService {
     
     var items: [String] {
         let files = (try? FileManager.default.contentsOfDirectory(atPath: pathForFolder)) ?? []
-
-        // Фильтруем только файлы изображений
+        
+        // Filter only image files
         let imageFiles = files.filter { fileName in
             let filePath = pathForFolder + "/" + fileName
             var isDirectory: ObjCBool = false
             FileManager.default.fileExists(atPath: filePath, isDirectory: &isDirectory)
             
             guard !isDirectory.boolValue else {
-                return false // Исключаем директории
+                return false // Exclude directories
             }
             
-            // Получаем расширение файла и проверяем, является ли оно изображением
+            // Get file extension and check if it's an image
             let fileExtension = URL(fileURLWithPath: filePath).pathExtension.lowercased()
             let imageExtensions = ["jpg", "jpeg", "png", "gif", "bmp", "webp"]
             return imageExtensions.contains(fileExtension)
@@ -73,9 +73,22 @@ final class FileService {
         }
     }
     
+    func deleteItem(withName fileName: String) {
+        let filePath = pathForFolder + "/" + fileName
+        do {
+            try FileManager.default.removeItem(atPath: filePath)
+        } catch {
+            print("Ошибка при удалении файла: \(error.localizedDescription)")
+        }
+    }
+    
     func deleteItem(at index: Int) {
         let path = pathForFolder + "/" + items[index]
         try? FileManager.default.removeItem(atPath: path)
+    }
+    
+    func getPath(withName fileName: String) -> String {
+        pathForFolder + "/" + fileName
     }
     
     func getPath(at index: Int) -> String {
